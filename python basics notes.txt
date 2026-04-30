@@ -1,0 +1,52 @@
+type function
+    type()
+Arthimetic operators
+    Add,Sub,Multi,div,floor division(//) - quotient,exponent (**), modulus (%) -remainder
+Increment operator 
+    num +=1 (num = num+1)
+abs() round()
+comparision - returns booleans
+cast
+Booleans
+is - validates if same object in memory
+False values
+    False
+    none
+    numeric type 0
+    empty sequence/mapping '',[],(),{}
+Loops
+    for num in nums:
+        print(num)
+    break
+    continue
+    loop in a loop
+    range
+    while
+Lists - mutable - can modify
+    negative index print(courses[-1])  slicing
+    append()
+    insert()
+    extend()
+    remove()
+    pop()-remove last value
+Sorting List
+    reverse() - here no need to reset our variables automatically applied - altering the list in place
+    sort(reverse=True)
+    c=sorted(courses) - need to set to a variable
+    min, max, sum
+    enumerate
+    for index,i in enumerate(courses,start=1):
+        print(index, i)
+    .join(courses)
+    courses.split(',')
+Tuples - immutable - cant modify ()
+sets - values unordered and no duplicates {}, membership test(value is present or not) other also give, but sets are optimized for this
+intersection method
+difference
+union
+empty_list=[]
+empty_list=list()
+empty_list=()
+empty_list=tuple()
+empty_list={} xxxxx - cannot create sets like these
+empty_list=set()
