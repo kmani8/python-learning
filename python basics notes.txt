@@ -1,3 +1,4 @@
+Day 1
 type function
     type()
 Arthimetic operators
@@ -50,3 +51,43 @@ empty_list=()
 empty_list=tuple()
 empty_list={} xxxxx - cannot create sets like these
 empty_list=set()
+i['value'] - to extract value from key pair/dict
+
+Day2
+Functions
+func() - reuse code without repeating itself
+func(a='hi')
+return - stores the ouput value of the function - can treat like a datatype
+def std_info(*args,**kwargs) *args - pack into tupe, **kwargs - pack into dict
+
+courses = ['math','sci']
+info = {'name':'vij','age':22}
+std_info(*courses,**info) - unpack and pass them in
+
+Dictionaries
+key : value pairs
+.get('key','default value') - if key not exisit it returns none instead of error
+st['phoene']=5555 - to add new key value pair
+student.update[{'key':'value'}]
+del - keyword to delete a key
+student.keys()
+stu.values()
+stu.items() - to display both 
+
+def filter_orders(*orders):
+    return [i for i in orders if i['amount'] > 100] ---- list compprehension
+filter_orders(*orders)
+
+customers = [{"name":"A","orders":[100, 200]},{"name":"B","orders":[50, 70]},{"name":"c","orders":[300]}]
+#for each cust total order value
+#print HIGH VALUE CUSTOMER if total > 250
+#use looping, function for total and condition
+
+def get_customer_total(orders):
+    return sum(customer["orders"])
+def label_customer(total):
+    return "HIGH VALUE CUSTOMER" if total > 250 else ""
+for customer in customers:
+    total = get_customer_total(customer)
+    label=label_customer(total)
+    print(f'Customer Name : {customer["name"]}, Total : {total}, {label}')
