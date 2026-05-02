@@ -91,3 +91,28 @@ for customer in customers:
     total = get_customer_total(customer)
     label=label_customer(total)
     print(f'Customer Name : {customer["name"]}, Total : {total}, {label}')
+
+File Objects
+    open('text.txt','w')  'r','a','r+','rb' - for binary
+    need to close when done f.close()
+    f.mode()
+    context manager- with - no need to worry about closeing
+    with open('wd.sql','r') as f:
+        print(f.read(100)) - first 100 characters
+    with open('wd.sql','r') as f:
+        print(f.readlines())
+    with open('wd.sql','r') as f:
+        f_contents=f.readline()
+        print(f_contents)
+        f_contents=f.readline()
+        print(f_contents,end='') - when run everytime gives the next line, end to remove any extra new line
+    with open('wd.sql','r') as f:
+        for line in f:
+            print(line,end='') - iteration over lines
+    f.tell() - postion of cursor in file
+    f.seek(10)- to modify the postion of next execution
+    f.write()  -overwrites
+
+Try/Except
+    
+
