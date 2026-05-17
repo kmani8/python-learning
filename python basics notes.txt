@@ -114,5 +114,30 @@ File Objects
     f.write()  -overwrites
 
 Try/Except
-    
 
+CSV files  - any delimiter - csv.reader / csv.DictReader/ if DictWriter used need to create fieldnames and header
+import csv
+with open("/Users/mani/sample.csv",'r') as csv_file:
+    csv_reader = csv.reader(csv_file)
+    with open("/Users/mani/samplewrite.csv",'w') as csv_file:
+        csv_writer = csv.writer(csv_file)
+        for line in csv_reader:
+            csv_writer.writerow(line)
+
+Pandas
+    pd.read_csv
+    df.head(3)
+    df.tail(3)
+    df.columns
+    df.iloc[1]
+    df.iloc[2,1] - specific location
+    df.iterrows() - for index,row in df.iterrows():
+    df.describe()
+    df.sort_values('Name',ascending=False)
+    df.drop(columns=['total'])
+    df.to_csv('modified.csv',index=False)
+    df.loc[df['Type 1']=='Grass'] - filtering
+    import re
+    df.loc[df['Type 1'].str.contains('fire|grass',flags=re.I,regex=True)]
+    df.groupby(['Type 1']).sum()
+    chunksize
